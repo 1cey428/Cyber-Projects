@@ -1,7 +1,8 @@
 # Cyber-Projects
 This repository contains my programming projects pertaining to cybersecurity. I created this repository to document my growth as a programmer and to keep track of the different projects I work on throughout my journey as an aspiring Security Engineer. I began programming because all my life ive played video games and as I got older I began to want to understand how the technology I used every day actually worked. .
 
-Why Cyber Secuirty: 
+Why Cyber Secuirty:
+
 I chose Cyber Security primarily because I found the problem-solving nature captivating. The idea of using OSINT to learn more about someone or something, developing software that could be embedded deep into systems to ward off threats, or simply scanning network requests to prevent breaches fascinates me even more. My interest in cybersecurity is also connected to my desire to help people stay safe online. Ultimately, I want to develop a solution that can be implemented in systems on a large scale to effectively protect others from digital threats.  
 
 Whats used:
