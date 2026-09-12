@@ -42,6 +42,23 @@ def b16_decoder():
     decoded_text16= base64.b16decode(encoded_text16)
     print(str(encoded_text16) + " Decoded is " + str(decoded_text16))
 
+#Image stuff
+def image_encoder():
+    file_path = input("Enter File path")
+    with open("file_path", "rb") as image_file:
+        img_data = image_file.read()
+    conversion_type = int(input(print("What base are we going to use \n 1.Base 16 \n 2.Base 32 \n 3.Base 64 \n Selection(Pick a Number):")))
+    if conversion_type == 1:
+        img_b16_code = base64.b16encode(img_data)
+        print(img_b16_code)
+    elif conversion_type == 2:
+        img_b32_code = base64.b32encode(img_data)
+        print(img_b32_code)
+    elif conversion_type == 3:
+        img_b64_code = base64.b64encode(img_data)
+        print (img_b64_code)
+
+
 #Main fuction
 def Encoder():
     print("Welcome to my Base64 converter! \n 1.Encode text \n 2.Encode image(WIP) \n 3.Decode Text \n 4.Decode Image" ) 
@@ -56,7 +73,8 @@ def Encoder():
         elif base_selection == 3:
             b64_encoder()
     elif user_input ==2:
-        print("WIP")
+        image_encoder()
+
     elif user_input ==3:
         print("")
         base_selection2 = int(input("What is it in \n 1.Base 16 \n 2.Base 32 \n 3.Base 64 \n Selection(Pick a Number):"))
