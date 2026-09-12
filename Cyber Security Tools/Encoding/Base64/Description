@@ -4,8 +4,15 @@ as long as its base64.
 
 Challenges:
 
+My main challenge was developing the image decoder as writting the program wasn't the hard part, it was finding a way to display the image after decoding it.
+eventually research lead me down a rabit whole where i was faced with 2 ultimatetums; use tkinter to display the image or use a different plugin; the os plugin
+which handles Miscellaneous operating system interfaces. Ultimately I went with the ladder, as albiet I am familiar with Tkinter I wanted to try something new, 
+and after doing a fair share of research I found that this method was actually easier and faster than the Tkinter method as I only needed to utilize 1 command
+to acomplish my goal. Both encountering and conquering this obstacle allowed me to discover a new plugin and learn more commands, and tools that I could possibly 
+in other projects.
 
 Resources:
 
 Official Python Website: https://docs.python.org/3/library/base64.html
+Official Python Website: https://docs.python.org/3/library/os.html
 Youtube video: https://www.youtube.com/watch?v=bEA8HI_I5bQ&t=561s
