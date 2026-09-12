@@ -1,3 +1,11 @@
 This program is designed to encode and decode text using Python’s Base64 plugin. Encoding is the process of converting readable data into a different format that can be safely stored and or transmitted. 
 Decoding, on the other hand, converts the encoded data back into its original form. My program allows users to enter text, choose whether they want to encode or decode whatever they would like (images coming soon)
 as long as its base64.  
+
+Challenges:
+
+
+Resources:
+
+Official Python Website: https://docs.python.org/3/library/base64.html
+Youtube video: https://www.youtube.com/watch?v=bEA8HI_I5bQ&t=561s
