@@ -1,4 +1,5 @@
 import base64
+import os
 #base 64 fucntions
 def b64_encoder():
     text=input("What would you like to convert: ")
@@ -42,10 +43,10 @@ def b16_decoder():
     decoded_text16= base64.b16decode(encoded_text16)
     print(str(encoded_text16) + " Decoded is " + str(decoded_text16))
 
-#Image stuff
+
 def image_encoder():
     file_path = input("Enter File path")
-    with open("file_path", "rb") as image_file:
+    with open(file_path, "rb") as image_file:
         img_data = image_file.read()
     conversion_type = int(input(print("What base are we going to use \n 1.Base 16 \n 2.Base 32 \n 3.Base 64 \n Selection(Pick a Number):")))
     if conversion_type == 1:
@@ -58,11 +59,30 @@ def image_encoder():
         img_b64_code = base64.b64encode(img_data)
         print (img_b64_code)
 
+def image_decoder():
+    decode_lvl = int(input("What is it in \n 1.Base 16 \n 2.Base 32 \n 3.Base 64 \n Selection(Pick a Number):"))
+    if decode_lvl == 1:
+        value = input("What is the value: ")
+        decodedVal = base64.b16decode(value)
+        with open("decoded_image.png", "wb") as image:
+            image.write(decodedVal)
+        os.startfile("decoded_image.png")
+    elif decode_lvl==2:
+        value = input("What is the value: ")
+        decodedVal = base64.b32decode(value)
+        with open("decoded_image.png", "wb") as image:
+            image.write(decodedVal)
+        os.startfile("decoded_image.png")
+    elif decode_lvl==3:
+        value = input("What is the value: ")
+        decodedVal = base64.b64decode(value)
+        with open("decoded_image.png", "wb") as image:
+            image.write(decodedVal)
+        os.startfile("decoded_image.png")
 
 #Main fuction
 def Encoder():
-    print("Welcome to my Base64 converter! \n 1.Encode text \n 2.Encode image(WIP) \n 3.Decode Text \n 4.Decode Image" ) 
-    user_input = int(input("what can I do for you: "))
+    user_input = int(input("Welcome to my Base64 converter! \n 1.Encode text \n 2.Encode image \n 3.Decode Text \n 4.Decode Image \n (Pick a Number):"))
     if user_input == 1:
         print("")
         base_selection = int(input("What base do you want to use \n 1.Base 16 \n 2.Base 32 \n 3.Base 64 \n Selection(Pick a Number):"))
@@ -74,6 +94,8 @@ def Encoder():
             b64_encoder()
     elif user_input ==2:
         image_encoder()
+    elif user_input == 4:
+        image_decoder()
 
     elif user_input ==3:
         print("")
